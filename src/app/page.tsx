@@ -17,13 +17,14 @@ export default function Home() {
           <h3 className="text-xl font-bold">
             With Inverator&apos; easy to use interface you can:
           </h3>
-          <ul>
-            <li>view all of your invoices</li>
-            <li>get a detailed view of a single invoice</li>
-            <li>edit an invoice&apos;s data</li>
-            <li>delete an invoice</li>
-          </ul>
-          <div className="mx-auto w-fit ">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="border-2 rounded-lg border-slate-900">
+              view all of your invoices
+            </div>
+            <div>get a detailed view of a single invoice</div>
+            <div>edit and delete an invoice</div>
+          </div>
+          <div className="mx-auto w-fit my-10">
             <Link
               href={"/invoices"}
               className="bg-slate-900 px-8 py-6 rounded-full text-xl font-bold text-white inline-block text-center mx-auto  hover:bg-blue-700 transition-all">
