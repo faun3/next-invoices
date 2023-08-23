@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 h-[6rem] sticky top-0 px-20 flex flex-row items-center justify-between">
       <div className="flex flex-row gap-2 items-center">
-        <GiCrestedHelmet className="text-white h-[4rem] w-[4rem]" />
+        <GiCrestedHelmet className="text-white h-[3rem] w-[3rem]" />
         <span className="text-white font-bold tracking-widest text-xl">
           INVERATOR
         </span>
