@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   const currentRoute = usePathname();
   return (
-    <nav className="bg-gray-900 h-[6rem] sticky top-0 px-20 flex flex-row items-center justify-between">
+    <nav className="bg-gray-900 h-[6rem] sticky top-0 px-20 flex flex-row items-center justify-between z-10">
       <div className="flex flex-row gap-2 items-center">
         <GiCrestedHelmet className="text-white h-[3rem] w-[3rem]" />
         <span className="text-white font-bold tracking-widest text-xl">
