@@ -19,8 +19,6 @@ const Page = async ({ params }: PageProps) => {
     return notFound();
   }
 
-  console.log(invoice);
-
   return (
     <main className="relative">
       {/* items table */}
