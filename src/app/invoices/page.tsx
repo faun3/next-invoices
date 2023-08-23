@@ -12,7 +12,9 @@ const Page = async () => {
   const data = await getInvoices();
 
   return (
-    <div>
+    // this is a gross hack to get stuff to fit on the screen
+    // tbh idk how to fix it rn so here it is
+    <div className="min-h-[calc(100vh-11rem)]">
       <h1>Wow</h1>
       <h2>{data[0].items[1].rawName}</h2>
     </div>
