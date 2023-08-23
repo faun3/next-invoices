@@ -11,9 +11,6 @@ const getInvoices = async () => {
 const Page = async () => {
   const data = await getInvoices();
 
-  console.log(data);
-  console.log(data[0].items[1].rawName);
-
   return (
     <div>
       <h1>Wow</h1>
