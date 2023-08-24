@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import IItem from "@/types/Item";
+import DeleteButton from "@/components/DeleteButton";
 
 type PageProps = {
   params: {
@@ -11,6 +12,12 @@ const getOneInvoice = async (id: string) => {
   const res = await fetch(`https://api.arolariu.ro/rest/invoices/${id}`);
   if (!res.ok) return undefined;
   return res.json();
+};
+
+const deleteOneInvoice = async (id: string) => {
+  const res = await fetch(`https://api.arolariu.ro/rest/invoices/${id}`, {
+    method: "DELETE",
+  });
 };
 
 const Page = async ({ params }: PageProps) => {
@@ -65,7 +72,7 @@ const Page = async ({ params }: PageProps) => {
           <button className="rounded-xl bg-emerald-600 text-white tracking-wide font-bold px-6 py-2">
             Edit
           </button>
-          <button className="text-red-600 underline ml-5">Delete</button>
+          <DeleteButton onClickAction={deleteOneInvoice}></DeleteButton>
         </div>
       </div>
     </main>
