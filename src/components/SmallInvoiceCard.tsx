@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import { BiSolidPencil } from "react-icons/bi";
+import Link from "next/link";
 
 export interface SmallInvoice {
   id: string;
@@ -41,9 +42,9 @@ const SmallInvoiceCard = ({ invoice }: SmallInvoiceProps) => {
           </p>
           <p>Added on: {dateText}</p>
         </div>
-        <div>
+        <Link href={`invoices/${invoice.id}`}>
           <BiSolidPencil className="w-8 h-8 cursor-pointer hover:text-blue-500" />
-        </div>
+        </Link>
       </div>
     </div>
   );
