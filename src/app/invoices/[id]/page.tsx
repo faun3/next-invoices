@@ -60,9 +60,13 @@ const Page = async ({ params }: PageProps) => {
           </table>
         </div>
       </div>
-      <div>
-        <button>Edit</button>
-        <button>Delete</button>
+      <div className="flex justify-center items-center">
+        <div>
+          <button className="rounded-xl bg-emerald-600 text-white tracking-wide font-bold px-6 py-2">
+            Edit
+          </button>
+          <button className="text-red-600 underline ml-5">Delete</button>
+        </div>
       </div>
     </main>
   );
