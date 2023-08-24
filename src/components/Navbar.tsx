@@ -7,19 +7,20 @@ import Link from "next/link";
 const Navbar = () => {
   const currentRoute = usePathname();
   return (
-    <nav className="bg-gray-900 h-[6rem] sticky top-0 px-20 flex flex-row items-center justify-between z-10">
-      <div className="flex flex-row gap-2 items-center">
-        <GiCrestedHelmet className="text-white h-[3rem] w-[3rem]" />
-        <span className="text-white font-bold tracking-widest text-xl">
+    <nav className="sticky top-0 z-10 flex h-[6rem] flex-row items-center justify-between bg-gray-900 px-20">
+      <div className="flex flex-row items-center gap-2">
+        <GiCrestedHelmet className="h-[3rem] w-[3rem] text-white" />
+        <span className="text-xl font-bold tracking-widest text-white">
           <span className="text-blue-400">INV</span>
           ERATOR
         </span>
       </div>
-      <ul className="text-white flex flex-row gap-4">
+      <ul className="flex flex-row gap-4 text-white">
         <li>
           <Link
             href={"/"}
-            className={`${currentRoute === "/" ? "underline font-bold" : ""}`}>
+            className={`${currentRoute === "/" ? "font-bold underline" : ""}`}
+          >
             Home
           </Link>
         </li>
@@ -27,8 +28,9 @@ const Navbar = () => {
           <Link
             href={"/invoices"}
             className={`${
-              currentRoute === "/invoices" ? "underline font-bold" : ""
-            }`}>
+              currentRoute === "/invoices" ? "font-bold underline" : ""
+            }`}
+          >
             Invoices
           </Link>
         </li>

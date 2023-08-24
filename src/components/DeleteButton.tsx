@@ -12,11 +12,12 @@ const DeleteButton = ({ id }: DeleteButtonProps) => {
 
   return (
     <button
-      className="text-red-600 underline ml-5"
+      className="ml-5 text-red-600 underline"
       onClick={() => {
         deleteOneInvoice(id);
         router.push("/invoices");
-      }}>
+      }}
+    >
       Delete
     </button>
   );
