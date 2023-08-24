@@ -8,8 +8,7 @@ export default function Home() {
   return (
     <main className="block h-fit">
       <div className="w-full overflow-hidden">
-        <div className="bg-slate-900 h-[5rem]"></div>
-        <div className="w-[95%] mx-auto bg-white rounded-xl relative -top-[5rem] px-10 py-10">
+        <div className="w-[95%] mx-auto bg-white rounded-xl px-10 py-10 my-10">
           <h1 className="text-3xl font-bold text-center mb-2 mt-2">
             Inverator is an app that allows you to easily manage your invoices.
           </h1>

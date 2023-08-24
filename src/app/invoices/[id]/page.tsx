@@ -20,10 +20,10 @@ const Page = async ({ params }: PageProps) => {
   }
 
   return (
-    <main className="relative">
+    // dirty hack again
+    <main className="min-h-[calc(100vh-11rem)]">
       {/* items table */}
-      <div className="h-[5rem] bg-slate-900"></div>
-      <div className="py-10 absolute -top-[3rem] w-full">
+      <div className="py-10 w-full">
         <div className="w-full px-10 py-6 bg-white rounded-xl max-w-[95%] flex flex-col mx-auto">
           <div className="justify-self-start mb-4">
             <h1 className="block text-xl font-bold">Items</h1>
@@ -59,6 +59,10 @@ const Page = async ({ params }: PageProps) => {
             </tbody>
           </table>
         </div>
+      </div>
+      <div>
+        <button>Edit</button>
+        <button>Delete</button>
       </div>
     </main>
   );
