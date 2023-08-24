@@ -1,15 +1,17 @@
 "use client";
 
 interface DeleteButtonProps {
-  onClickAction: (id: string) => void;
+  id: string;
 }
 
-const DeleteButton = ({ onClickAction }: DeleteButtonProps) => {
+import { deleteOneInvoice } from "@/app/invoices/[id]/page";
+
+const DeleteButton = ({ id }: DeleteButtonProps) => {
   return (
     <button
       className="text-red-600 underline ml-5"
       onClick={() => {
-        onClickAction;
+        deleteOneInvoice(id);
       }}>
       Delete
     </button>

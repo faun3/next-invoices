@@ -14,7 +14,7 @@ const getOneInvoice = async (id: string) => {
   return res.json();
 };
 
-const deleteOneInvoice = async (id: string) => {
+export const deleteOneInvoice = async (id: string) => {
   const res = await fetch(`https://api.arolariu.ro/rest/invoices/${id}`, {
     method: "DELETE",
   });
@@ -72,7 +72,7 @@ const Page = async ({ params }: PageProps) => {
           <button className="rounded-xl bg-emerald-600 text-white tracking-wide font-bold px-6 py-2">
             Edit
           </button>
-          <DeleteButton onClickAction={deleteOneInvoice}></DeleteButton>
+          <DeleteButton id={invoice.id}></DeleteButton>
         </div>
       </div>
     </main>
